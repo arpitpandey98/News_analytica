@@ -14,3 +14,6 @@ print(data)
 for d in data:
     st.title(d.name)
     st.image('../figures/'+d.path)
+
+
+    
