@@ -6,14 +6,17 @@ import os
 import pandas as pd
 import numpy as np
 
-from plot import linePlot
+from plot import plot
+from preparedData import Data
 
 
+data = Data()
 # basepath = os.path.abspath(os.getcwd())
-data=pd.read_csv('news_summary.csv', encoding= "latin1")
-st.dataframe(data)
+df=pd.read_csv('news_summary.csv', encoding= "latin1")
+st.dataframe(df)
 
-st.plotly_chart(linePlot([]))
+dataToPlot , x, y = data.getHeadingCount()
+st.plotly_chart(plot(dataToPlot, x, y))
 # engine =create_engine('sqlite:///project_db.sqlite3')
 # Session =sessionmaker(bind=engine)
 # sess =Session()
