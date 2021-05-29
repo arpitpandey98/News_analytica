@@ -64,11 +64,11 @@ def analyseAuthors():
         if occ == 'News Headlines Text':
             dataToPlot = data.getAuthorSentiments('headlines')
             st.plotly_chart(plotGroupedBar(dataToPlot, [
-                        "Positive", "Negative", "Neutral"], 'title', 'xlabel', 'ylabel', ['green', 'indianred', 'lightblue']))
+                        "Positive", "Negative", "Neutral"], 'Author News Headlines Text', 'sentiment', 'Author count', ['green', 'indianred', 'lightblue']))
         elif occ == 'News Summary Text':
             dataToPlot = data.getAuthorSentiments('text')
             st.plotly_chart(plotGroupedBar(dataToPlot, [
-                        "Positive", "Negative", "Neutral"], 'title', 'xlabel', 'ylabel', ['green', 'indianred', 'lightblue']))
+                        "Positive", "Negative", "Neutral"], 'Author News Summary Text', 'sentiment', 'Author count', ['green', 'indianred', 'lightblue']))
 
 
 
@@ -119,11 +119,11 @@ def analyseTimeline():
         if occ == 'News Headlines Text':
             dataToPlot = data.getMonthSentiments('headlines')
             st.plotly_chart(plotGroupedBar(dataToPlot, [
-                        "Positive", "Negative", "Neutral"], 'title', 'xlabel', 'ylabel', ['green', 'indianred', 'lightblue']))
+                        "Positive", "Negative", "Neutral"], 'Month wise News Headlines Text', 'sentiment', 'count', ['green', 'indianred', 'lightblue']))
         elif occ == 'News Summary Text':
             dataToPlot = data.getMonthSentiments('text')
             st.plotly_chart(plotGroupedBar(dataToPlot, [
-                        "Positive", "Negative", "Neutral"], 'title', 'xlabel', 'ylabel', ['green', 'indianred', 'lightblue']))
+                        "Positive", "Negative", "Neutral"], 'Month wise News Summary Text', 'sentiment', 'count', ['green', 'indianred', 'lightblue']))
 
         st.markdown("---")
 
@@ -133,11 +133,11 @@ def analyseTimeline():
         if occ == 'News Headlines Text':
             dataToPlot = data.getYearSentiments('headlines')
             st.plotly_chart(plotGroupedBar(dataToPlot, [
-                        "Positive", "Negative", "Neutral"], 'title', 'xlabel', 'ylabel', ['green', 'indianred', 'lightblue']))
+                        "Positive", "Negative", "Neutral"], 'Year Wise News Headlines Text', 'sentiment', 'count', ['green', 'indianred', 'lightblue']))
         elif occ == 'News Summary Text':
             dataToPlot = data.getYearSentiments('text')
             st.plotly_chart(plotGroupedBar(dataToPlot, [
-                        "Positive", "Negative", "Neutral"], 'title', 'xlabel', 'ylabel', ['green', 'indianred', 'lightblue']))
+                        "Positive", "Negative", "Neutral"], 'Year Wise News Summary Text', 'sentiment', 'count', ['green', 'indianred', 'lightblue']))
 
 
 
